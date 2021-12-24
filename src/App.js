@@ -11,7 +11,7 @@ function App() {
 
   const dictionaryApi = async() => {
     try {
-      const data = await axios.get('https://api.dictionaryapi.dev/api/v2/entries/en/plane');
+      const data = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/${language}/${word}`);
 
       setMeanings(data.data);
     } catch (error) {
@@ -23,7 +23,7 @@ function App() {
 
   useEffect(() => {
     dictionaryApi();
-  }, []);
+  }, [word, language]);
 
   return (
     <div className="App" style={{height: '100vh', backgroundColor: '#282c34', color: '#fff'}}>
