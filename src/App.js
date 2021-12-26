@@ -26,7 +26,7 @@ function App() {
   }, [word, language]);
 
   return (
-    <div className="App" style={{height: '100vh', backgroundColor: '#282c34', color: '#fff'}}>
+    <div className="App">
       <Container maxWidth="md">
         <Header word={word} setWord={setWord} language={language} setLanguage={setLanguage} />
       </Container>
