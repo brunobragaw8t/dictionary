@@ -4,6 +4,13 @@ import './Meanings.css';
 const Meanings = ({word, setWord, meanings}) => {
   return (
     <div className="meanings">
+        {console.log(meanings)}
+        {meanings[0] && meanings[0].phonetics[0].audio && (
+          <div className="meanings-item audio">
+            <audio src={meanings[0].phonetics[0].audio} controls></audio>
+          </div>
+        )}
+
         {word === "" ? (
           <h3 style={{textAlign: 'center'}}>Start by typing a word</h3>
         ) : (

@@ -9,6 +9,10 @@
     margin-bottom: 20px;
 }
 
+.meanings-item audio {
+    width: 100%;
+}
+
 .part-of-speech {
     margin-top: 0;
 }
