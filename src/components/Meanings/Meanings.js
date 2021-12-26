@@ -22,7 +22,10 @@ const Meanings = ({word, setWord, meanings}) => {
                 <ul className="definitions">
                   {item_meanings.definitions.map(definition => (
                     <li className="definitions-item">
-                      <span className="definition">{definition.definition}</span>
+                      <span className="definition">
+                        <b>Definition</b>:<br />
+                        {definition.definition}
+                      </span>
 
                       {typeof definition.example !== 'undefined' ? (
                         <div class="details-item">
