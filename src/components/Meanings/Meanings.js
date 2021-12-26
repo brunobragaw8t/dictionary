@@ -1,7 +1,7 @@
 import React from 'react';
 import './Meanings.css';
 
-const Meanings = ({word, meanings}) => {
+const Meanings = ({word, setWord, meanings}) => {
   return (
     <div className="meanings">
         {word === "" ? (
@@ -15,8 +15,6 @@ const Meanings = ({word, meanings}) => {
                 <ul className="definitions">
                   {item_meanings.definitions.map(definition => (
                     <li className="definitions-item">
-                      {console.log(definition)}
-
                       <span className="definition">{definition.definition}</span>
 
                       {typeof definition.example !== 'undefined' ? (
@@ -31,7 +29,9 @@ const Meanings = ({word, meanings}) => {
 
                       {typeof definition.synonyms !== 'undefined' && definition.synonyms.length ? (
                         <div class="details-item">
-                          <b>Synonyms:</b> {definition.synonyms.join(', ')}
+                          <b>Synonyms:</b> {definition.synonyms.map(synonym => (
+                            <a onClick={() => { setWord(synonym) }}>{synonym}</a>
+                          ))}
                         </div>
                       ) : (
                         <div class="details-item">
@@ -41,7 +41,9 @@ const Meanings = ({word, meanings}) => {
 
                       {typeof definition.antonyms !== 'undefined' && definition.antonyms.length ? (
                         <div class="details-item">
-                          <b>Antonyms:</b> {definition.antonyms.join(', ')}
+                          <b>Antonyms:</b> {definition.antonyms.map(antonym => (
+                            <a onClick={() => { setWord(antonym) }}>{antonym}</a>
+                          ))}
                         </div>
                       ) : (
                         <div class="details-item">

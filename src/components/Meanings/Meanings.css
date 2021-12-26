@@ -29,3 +29,16 @@
 .details-item {
     margin-top: 10px;
 }
+
+.details-item a {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.details-item a:nth-last-child(n+2)::after {
+    content: ', ';
+}
+
+.details-item a:hover {
+    color: #2196f3;
+}

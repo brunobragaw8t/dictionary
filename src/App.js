@@ -29,7 +29,7 @@ function App() {
       <Container maxWidth="md">
         <Header word={word} setWord={setWord} language={language} setLanguage={setLanguage} />
 
-        <Meanings word={word} meanings={meanings} />
+        <Meanings word={word} setWord={setWord} meanings={meanings} />
       </Container>
     </div>
   );
