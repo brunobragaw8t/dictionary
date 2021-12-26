@@ -3,6 +3,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import { Container } from '@mui/material';
 import Header from './components/Header/Header';
+import Meanings from './components/Meanings/Meanings';
 
 function App() {
   const [word, setWord] = useState('');
@@ -15,11 +16,9 @@ function App() {
 
       setMeanings(data.data);
     } catch (error) {
-      console.log(error);
+      setMeanings([]);
     }
   }
-
-  console.log(meanings);
 
   useEffect(() => {
     dictionaryApi();
@@ -29,6 +28,8 @@ function App() {
     <div className="App">
       <Container maxWidth="md">
         <Header word={word} setWord={setWord} language={language} setLanguage={setLanguage} />
+
+        <Meanings word={word} meanings={meanings} />
       </Container>
     </div>
   );
