@@ -4,3 +4,8 @@
     color: #fff;
     padding: 70px 0;
 }
+
+.App.light-mode {
+    background: #fff;
+    color: #282c34;
+}

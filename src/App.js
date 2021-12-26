@@ -9,6 +9,7 @@ function App() {
   const [word, setWord] = useState('');
   const [meanings, setMeanings] = useState([]);
   const [language, setLanguage] = useState('en');
+  const [darkMode, setDarkMode] = useState(1);
 
   const dictionaryApi = async() => {
     try {
@@ -25,9 +26,9 @@ function App() {
   }, [word, language]);
 
   return (
-    <div className="App">
+    <div className={`App ${!darkMode ? 'light-mode' : ''}`}>
       <Container maxWidth="md">
-        <Header word={word} setWord={setWord} language={language} setLanguage={setLanguage} />
+        <Header word={word} setWord={setWord} language={language} setLanguage={setLanguage} darkMode={darkMode} setDarkMode={setDarkMode} />
 
         <Meanings word={word} setWord={setWord} meanings={meanings} />
       </Container>

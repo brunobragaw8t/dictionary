@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
+    position: relative;
 }
 
 .title {
@@ -12,6 +13,12 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
     margin-bottom: 50px;
+}
+
+.theme-switcher {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .inputs {

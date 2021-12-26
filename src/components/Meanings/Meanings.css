@@ -46,3 +46,16 @@
 .details-item a:hover {
     color: #2196f3;
 }
+
+
+/**
+ * Light mode
+ */
+
+.App.light-mode .meanings {
+    background: rgba(0, 0, 0, .05);
+}
+
+.App.light-mode .meanings-item:nth-last-child(n+2) {
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+}
