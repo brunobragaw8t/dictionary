@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Dictionary",
+  "name": "A simple App to check definitions, examples, synonyms and antonyms of typed words.",
   "icons": [
     {
       "src": "favicon.ico",
